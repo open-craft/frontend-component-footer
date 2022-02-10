@@ -1,26 +1,36 @@
 import React from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
+import {
+  faTwitter,
+  faReddit,
+  faFacebook,
+  faYoutube,
+  faInstagram,
+  faLinkedin,
+} from "@fortawesome/free-brands-svg-icons";
+import { library } from "@fortawesome/fontawesome-svg-core";
+
+library.add(
+  faTwitter,
+  faReddit,
+  faFacebook,
+  faYoutube,
+  faInstagram,
+  faLinkedin
+);
 
 export default function FooterLink(props) {
-  const { title, url, iconClass } = props;
-
-  let paddingClass = "px-3";
+  let { title, url, iconClass } = props;
 
   if (iconClass) {
-    paddingClass = "px-1";
-  }
-
-  if (iconClass) {
+    iconClass = iconClass.replace("fa-", "").replace("-square", "");
     return (
-      <a className={paddingClass} title={title} href={url}>
-        <i className={`fa ${iconClass}`} />
-        {title[0]}
+      <a title={title} href={url}>
+        <FontAwesomeIcon icon={["fab", iconClass]} />
       </a>
     );
   } else {
-    return (
-      <a className={paddingClass} href={url}>
-        {title}
-      </a>
-    );
+    return <a href={url}>{title}</a>;
   }
 }
