@@ -75,18 +75,18 @@ function SiteFooter(props) {
     <footer role="contentinfo" className="footer border-top pt-5 py-3 px-4">
       <div className="container-fluid">
         <div className="row">
-          <div className="navigation-links col-md-6 col-sm-12">
+          <div className="navigation-links col-lg-6 col-sm-12">
             {renderLinks(
               footerConfig.navigation_links,
               <span className="px-3" />
             )}
           </div>
-          <div className="social-links col-md-6 col-sm-12">
+          <div className="social-links col-lg-6 col-sm-12">
             {renderLinks(footerConfig.social_links, <span className="px-3" />)}
           </div>
         </div>
         <div className="row">
-          <div className="legal-links offset-md-6 col-md-6 col-sm-12 text-right">
+          <div className="legal-links offset-lg-6 col-lg-6 col-sm-12">
             <span>
               {"\u00a9"} {getConfig().SITE_NAME}
             </span>
@@ -103,14 +103,14 @@ function SiteFooter(props) {
         <div className="footer-separator"></div>
 
         <div className="row theme-copyright">
-          <div className="col-md-6 col-sm-12 copyright-section">
+          <div className="col-lg-6 col-sm-12 copyright-section">
             <div className="footer-logo opencraft-logo" />
             <span className="copyright-text">
               Theme licensed under the AGPLv3 License. <br />
               Copyright 2021 by OpenCraft
             </span>
           </div>
-          <div className="col-md-6 col-sm-12 copyright-section">
+          <div className="col-lg-6 col-sm-12 copyright-section">
             <div className="footer-logo edx-logo" />
             <span className="copyright-text">
               edX, Open edX and their respective logos are registered trademarks
