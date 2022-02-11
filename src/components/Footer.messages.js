@@ -4,32 +4,38 @@ const messages = defineMessages({
   'footer.socialLinks.srText.facebook': {
     id: 'footer.socialLinks.srText.facebook',
     defaultMessage: 'Like edX on Facebook',
-    description: 'This is screenreader text for the edX Facebook social media link in the footer.',
+    description:
+      'This is screenreader text for the edX Facebook social media link in the footer.',
   },
   'footer.socialLinks.srText.twitter': {
     id: 'footer.socialLinks.srText.twitter',
     defaultMessage: 'Follow edX on Twitter',
-    description: 'This is screenreader text for the edX Twitter social media link in the footer.',
+    description:
+      'This is screenreader text for the edX Twitter social media link in the footer.',
   },
   'footer.socialLinks.srText.youtube': {
     id: 'footer.socialLinks.srText.youtube',
     defaultMessage: 'Subscribe to the edX YouTube channel',
-    description: 'This is screenreader text for the edX YouTube social media link in the footer.',
+    description:
+      'This is screenreader text for the edX YouTube social media link in the footer.',
   },
   'footer.socialLinks.srText.linkedin': {
     id: 'footer.socialLinks.srText.linkedin',
     defaultMessage: 'Follow edX on LinkedIn',
-    description: 'This is screenreader text for the edX LinkedIn social media link in the footer.',
+    description:
+      'This is screenreader text for the edX LinkedIn social media link in the footer.',
   },
   'footer.socialLinks.srText.reddit': {
     id: 'footer.socialLinks.srText.reddit',
     defaultMessage: 'Subscribe to the edX subreddit',
-    description: 'This is screenreader text for the edX reddit social media link in the footer.',
+    description:
+      'This is screenreader text for the edX reddit social media link in the footer.',
   },
   'footer.languageForm.select.label': {
     id: 'footer.languageForm.select.label',
     defaultMessage: 'Choose Language',
-    description: 'The label for the laguage select part of the language selection form.',
+    description:
+      'The label for the laguage select part of the language selection form.',
   },
   'footer.languageForm.submit.label': {
     id: 'footer.languageForm.submit.label',
@@ -129,12 +135,14 @@ const messages = defineMessages({
   'footer.mobileApp.apple': {
     id: 'footer.mobileApp.apple',
     defaultMessage: 'Download the edX mobile app from the Apple App Store',
-    description: 'The label for the link to download the apple version of the edX app.',
+    description:
+      'The label for the link to download the apple version of the edX app.',
   },
   'footer.mobileApp.google': {
     id: 'footer.mobileApp.google',
     defaultMessage: 'Download the edX mobile app from Google Play',
-    description: 'The label for the link to download the google version of the edX app.',
+    description:
+      'The label for the link to download the google version of the edX app.',
   },
   'footer.logo.altText': {
     id: 'footer.logo.altText',

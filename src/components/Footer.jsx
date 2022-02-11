@@ -1,34 +1,34 @@
-import React, { useContext, useEffect, useState } from "react";
-import PropTypes from "prop-types";
-import { injectIntl, intlShape } from "@edx/frontend-platform/i18n";
-import { sendTrackEvent } from "@edx/frontend-platform/analytics";
-import { ensureConfig, getConfig } from "@edx/frontend-platform/config";
-import { AppContext } from "@edx/frontend-platform/react";
-import { getFooterBranding } from "../data/api";
-import FooterLink from "./FooterLink";
+import React, { useContext, useEffect, useState } from 'react';
+import PropTypes from 'prop-types';
+import { injectIntl, intlShape } from '@edx/frontend-platform/i18n';
+import { sendTrackEvent } from '@edx/frontend-platform/analytics';
+import { ensureConfig, getConfig } from '@edx/frontend-platform/config';
+import { AppContext } from '@edx/frontend-platform/react';
+import { getFooterBranding } from '../data/api';
+import FooterLink from './FooterLink';
 
-import messages from "./Footer.messages";
-import LanguageSelector from "./LanguageSelector";
+import messages from './Footer.messages';
+import LanguageSelector from './LanguageSelector';
 
-ensureConfig(["LOGO_TRADEMARK_URL"], "Footer component");
+ensureConfig(['LOGO_TRADEMARK_URL'], 'Footer component');
 
 const EVENT_NAMES = {
-  FOOTER_LINK: "edx.bi.footer.link",
+  FOOTER_LINK: 'edx.bi.footer.link',
 };
 
 function getLocalePrefix(locale) {
   const twoLetterPrefix = locale.substring(0, 2).toLowerCase();
-  if (twoLetterPrefix === "en") {
-    return "";
+  if (twoLetterPrefix === 'en') {
+    return '';
   }
   return `/${twoLetterPrefix}`;
 }
 
 function externalLinkClickHandler(event) {
-  const label = event.currentTarget.getAttribute("href");
+  const label = event.currentTarget.getAttribute('href');
   const eventName = EVENT_NAMES.FOOTER_LINK;
   const properties = {
-    category: "outbound_link",
+    category: 'outbound_link',
     label,
   };
   sendTrackEvent(eventName, properties);
@@ -42,7 +42,7 @@ function renderLinks(links, spacer) {
       <React.Fragment key={index}>
         {!(isFirst || isLast) ? spacer : null}
         <FooterLink
-          iconClass={link["icon-class"]}
+          iconClass={link['icon-class']}
           name={link.name}
           url={link.url}
           title={link.title}
@@ -88,7 +88,7 @@ function SiteFooter(props) {
         <div className="row">
           <div className="legal-links offset-lg-6 col-lg-6 col-sm-12">
             <span>
-              {"\u00a9"} {getConfig().SITE_NAME}
+              {'\u00a9'} {getConfig().SITE_NAME}
             </span>
             <span className="px-2">|</span>
 

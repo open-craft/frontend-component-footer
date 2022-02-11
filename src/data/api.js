@@ -1,7 +1,7 @@
-import { getConfig } from "@edx/frontend-platform";
-import { getHttpClient } from "@edx/frontend-platform/auth";
+import { getConfig } from '@edx/frontend-platform';
+import { getHttpClient } from '@edx/frontend-platform/auth';
 const clientOptions = {
-  headers: { accept: "application/json" },
+  headers: { accept: 'application/json' },
 };
 
 export function getFooterBranding(courseId) {

@@ -10,7 +10,7 @@ describe('<Footer />', () => {
   describe('renders correctly', () => {
     it('renders without a language selector', () => {
       const tree = renderer
-        .create((
+        .create(
           <IntlProvider locale="en">
             <AppContext.Provider
               value={{
@@ -23,13 +23,13 @@ describe('<Footer />', () => {
               <Footer />
             </AppContext.Provider>
           </IntlProvider>
-        ))
+        )
         .toJSON();
       expect(tree).toMatchSnapshot();
     });
     it('renders without a language selector in es', () => {
       const tree = renderer
-        .create((
+        .create(
           <IntlProvider locale="es">
             <AppContext.Provider
               value={{
@@ -42,13 +42,13 @@ describe('<Footer />', () => {
               <Footer />
             </AppContext.Provider>
           </IntlProvider>
-        ))
+        )
         .toJSON();
       expect(tree).toMatchSnapshot();
     });
     it('renders with a language selector', () => {
       const tree = renderer
-        .create((
+        .create(
           <IntlProvider locale="en">
             <AppContext.Provider
               value={{
@@ -67,7 +67,7 @@ describe('<Footer />', () => {
               />
             </AppContext.Provider>
           </IntlProvider>
-        ))
+        )
         .toJSON();
       expect(tree).toMatchSnapshot();
     });
@@ -76,7 +76,7 @@ describe('<Footer />', () => {
   describe('handles language switching', () => {
     it('calls onLanguageSelected prop when a language is changed', () => {
       const mockHandleLanguageSelected = jest.fn();
-      const wrapper = mount((
+      const wrapper = mount(
         <IntlProvider locale="en">
           <AppContext.Provider
             value={{
@@ -95,7 +95,7 @@ describe('<Footer />', () => {
             />
           </AppContext.Provider>
         </IntlProvider>
-      ));
+      );
 
       wrapper.find('form').simulate('submit', {
         target: {
