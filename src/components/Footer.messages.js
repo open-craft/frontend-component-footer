@@ -159,6 +159,22 @@ const messages = defineMessages({
     defaultMessage: 'Page Footer',
     description: 'aria-label for the footer component',
   },
+  'footer.themeLicense': {
+    id: 'footer.themeLicense',
+    defaultMessage: 'Theme licensed under the AGPLv3 License.',
+    description: 'The license of the theme',
+  },
+  'footer.themeCopyright': {
+    id: 'footer.themeCopyright',
+    defaultMessage: 'Copyright 2021 by OpenCraft',
+    description: 'Theme creator copyright notice',
+  },
+  'footer.edxCopyright': {
+    id: 'footer.edxCopyright',
+    defaultMessage:
+      "edX, Open edX and their respective logos are registered trademarks of edX Inc. Free online courses at edX.org'",
+    description: 'edX copyright notice',
+  },
 });
 
 export default messages;

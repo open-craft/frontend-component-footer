@@ -6,6 +6,7 @@ import { ensureConfig, getConfig } from '@edx/frontend-platform/config';
 import { AppContext } from '@edx/frontend-platform/react';
 import { getFooterBranding } from '../data/api';
 import FooterLink from './FooterLink';
+import FooterLinks from './FooterLinks';
 
 import messages from './Footer.messages';
 import LanguageSelector from './LanguageSelector';
@@ -34,24 +35,6 @@ function externalLinkClickHandler(event) {
   sendTrackEvent(eventName, properties);
 }
 
-function renderLinks(links, spacer) {
-  return links.map((link, index) => {
-    const isFirst = index == 0;
-    const isLast = index - 1 == links.length;
-    return (
-      <React.Fragment key={index}>
-        {!(isFirst || isLast) ? spacer : null}
-        <FooterLink
-          iconClass={link['icon-class']}
-          name={link.name}
-          url={link.url}
-          title={link.title}
-        />
-      </React.Fragment>
-    );
-  });
-}
-
 function SiteFooter(props) {
   const { supportedLanguages, onLanguageSelected, logo, intl } = props;
   const showLanguageSelector =
@@ -76,13 +59,16 @@ function SiteFooter(props) {
       <div className="container-fluid">
         <div className="row">
           <div className="navigation-links col-lg-6 col-sm-12">
-            {renderLinks(
-              footerConfig.navigation_links,
-              <span className="px-3" />
-            )}
+            <FooterLinks
+              links={footerConfig.navigation_links}
+              spacer={<span className="px-3" />}
+            />
           </div>
           <div className="social-links col-lg-6 col-sm-12">
-            {renderLinks(footerConfig.social_links, <span className="px-3" />)}
+            <FooterLinks
+              links={footerConfig.social_links}
+              spacer={<span className="px-3" />}
+            />
           </div>
         </div>
         <div className="row">
@@ -94,27 +80,28 @@ function SiteFooter(props) {
 
             <span>All rights reserved</span>
             <span className="px-2">|</span>
-            {renderLinks(
-              footerConfig.legal_links,
-              <span className="px-2">|</span>
-            )}
+            <FooterLinks
+              links={footerConfig.legal_links}
+              spacer={<span className="px-2">|</span>}
+            />
           </div>
         </div>
+
         <div className="footer-separator"></div>
 
         <div className="row theme-copyright">
           <div className="col-lg-6 col-sm-12 copyright-section">
             <div className="footer-logo opencraft-logo" />
             <span className="copyright-text">
-              Theme licensed under the AGPLv3 License. <br />
-              Copyright 2021 by OpenCraft
+              {intl.formatMessage(messages['footer.themeLicense'])}
+              <br />
+              {intl.formatMessage(messages['footer.themeCopyright'])}
             </span>
           </div>
           <div className="col-lg-6 col-sm-12 copyright-section">
             <div className="footer-logo edx-logo" />
             <span className="copyright-text">
-              edX, Open edX and their respective logos are registered trademarks
-              of edX Inc. Free online courses at edX.org
+              {intl.formatMessage(messages['footer.edxCopyright'])}
             </span>
           </div>
         </div>
