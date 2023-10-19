@@ -48,7 +48,7 @@ Installation
 
 To install this footer into your Open edX micro-frontend, run the following command in your MFE:
 
-``npm i --save @edx/frontend-component-footer``
+``npm i --save @opencraft/frontend-component-footer``
 
 This will make the component available to be imported into your application.
 
@@ -134,7 +134,7 @@ Component Usage Example
 
 .. code-block:: javascript
 
-   import Footer, { messages } from '@edx/frontend-component-footer';
+   import Footer, { messages } from '@opencraft/frontend-component-footer';
 
    ...
 
@@ -224,12 +224,12 @@ Please do not report security issues in public. Please email security@openedx.or
 .. |Build Status| image:: https://api.travis-ci.com/edx/frontend-component-footer.svg?branch=master
    :target: https://travis-ci.com/edx/frontend-component-footer
 .. |Codecov| image:: https://img.shields.io/codecov/c/github/edx/frontend-component-footer
-   :target: @edx/frontend-component-footer
-.. |npm_version| image:: https://img.shields.io/npm/v/@edx/frontend-component-footer.svg
-   :target: @edx/frontend-component-footer
-.. |npm_downloads| image:: https://img.shields.io/npm/dt/@edx/frontend-component-footer.svg
-   :target: @edx/frontend-component-footer
-.. |license| image:: https://img.shields.io/npm/l/@edx/frontend-component-footer.svg
-   :target: @edx/frontend-component-footer
+   :target: @opencraft/frontend-component-footer
+.. |npm_version| image:: https://img.shields.io/npm/v/@opencraft/frontend-component-footer.svg
+   :target: @opencraft/frontend-component-footer
+.. |npm_downloads| image:: https://img.shields.io/npm/dt/@opencraft/frontend-component-footer.svg
+   :target: @opencraft/frontend-component-footer
+.. |license| image:: https://img.shields.io/npm/l/@opencraft/frontend-component-footer.svg
+   :target: @opencraft/frontend-component-footer
 .. |semantic-release| image:: https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg
    :target: https://github.com/semantic-release/semantic-release
