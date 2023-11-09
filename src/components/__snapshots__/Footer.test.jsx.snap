@@ -5,21 +5,25 @@ exports[`<Footer /> renders correctly renders with a language selector 1`] = `
   className="footer d-flex border-top py-3 px-4 "
   role="contentinfo"
 >
-  <a
-    aria-label="edX Home"
-    className="d-block"
-    href="http://localhost:18000"
+  <div
+    className="d-flex justify-content-center "
   >
-    <img
-      alt="Powered by Open edX"
-      src="https://edx-cdn.org/v3/default/logo-trademark.svg"
-      style={
-        Object {
-          "maxHeight": 45,
+    <a
+      aria-label="edX Home"
+      className="d-block"
+      href="http://localhost:18000"
+    >
+      <img
+        alt="Powered by Open edX"
+        src="https://edx-cdn.org/v3/default/logo-trademark.svg"
+        style={
+          Object {
+            "maxHeight": 45,
+          }
         }
-      }
-    />
-  </a>
+      />
+    </a>
+  </div>
   <div
     className="flex-grow-1"
   />
@@ -74,22 +78,26 @@ exports[`<Footer /> renders correctly renders without a language selector 1`] = 
     }
   }
 >
-  <a
-    aria-label="edX Home"
-    className="d-block"
-    href="http://localhost:18000"
+  <div
+    className="d-flex justify-content-center "
   >
-    <img
-      alt="Powered by Open edX"
-      src="https://edx-cdn.org/v3/default/logo-trademark.svg"
-      style={
-        Object {
-          "color": "white",
-          "maxHeight": 45,
+    <a
+      aria-label="edX Home"
+      className="d-block"
+      href="http://localhost:18000"
+    >
+      <img
+        alt="Powered by Open edX"
+        src="https://edx-cdn.org/v3/default/logo-trademark.svg"
+        style={
+          Object {
+            "color": "white",
+            "maxHeight": 45,
+          }
         }
-      }
-    />
-  </a>
+      />
+    </a>
+  </div>
   <div
     className="flex-grow-1"
   />
@@ -133,22 +141,26 @@ exports[`<Footer /> renders correctly renders without a language selector in es 
     }
   }
 >
-  <a
-    aria-label="edX Home"
-    className="d-block"
-    href="http://localhost:18000"
+  <div
+    className="d-flex justify-content-center "
   >
-    <img
-      alt="Powered by Open edX"
-      src="https://edx-cdn.org/v3/default/logo-trademark.svg"
-      style={
-        Object {
-          "color": "white",
-          "maxHeight": 45,
+    <a
+      aria-label="edX Home"
+      className="d-block"
+      href="http://localhost:18000"
+    >
+      <img
+        alt="Powered by Open edX"
+        src="https://edx-cdn.org/v3/default/logo-trademark.svg"
+        style={
+          Object {
+            "color": "white",
+            "maxHeight": 45,
+          }
         }
-      }
-    />
-  </a>
+      />
+    </a>
+  </div>
   <div
     className="flex-grow-1"
   />
