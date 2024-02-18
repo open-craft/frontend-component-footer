@@ -48,6 +48,7 @@ class SiteFooter extends React.Component {
         className={`footer d-flex border-top py-3 px-4 ${config.FOOTER_CUSTOM_CLASSNAMES || ''}`}
         style={config.FOOTER_CUSTOM_STYLE}
       >
+        <div className={`container-xl py-2 d-flex align-items-center ${config.FOOTER_CONTAINER_CUSTOM_CLASSNAMES || ''}`}>
         <a
           className="d-block"
           href={config.LMS_BASE_URL}
@@ -80,7 +81,7 @@ class SiteFooter extends React.Component {
             onSubmit={onLanguageSelected}
           />
         )}
-
+      </div>
       </footer>
     );
   }
