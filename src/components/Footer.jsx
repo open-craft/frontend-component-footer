@@ -60,7 +60,7 @@ class SiteFooter extends React.Component {
                 >
                   {element.text}
                 </a>
-              )).reduce((prev, curr) => [prev, '|', curr])}
+              ))}
             </div>
           )}
           <div className="flex-grow-1" />
