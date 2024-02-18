@@ -115,6 +115,8 @@ Other than the environment variables listed above, it is also possible to custom
        },
        # Update footer container styling via bootstrap classes
        "FOOTER_CUSTOM_CLASSNAMES": "py-5 px-4 text-center flex-column justify-content-center flex-wrap text-dark",
+       # Update footer inner conatiner styling via bootstray classes
+       "FOOTER_CONTAINER_CUSTOM_CLASSNAMES": "py-5 px-4 text-center flex-column justify-content-center flex-wrap text-dark"
        # Update footer logo styling
        "FOOTER_LOGO_STYLE": {
            "marginBottom": "2rem",
