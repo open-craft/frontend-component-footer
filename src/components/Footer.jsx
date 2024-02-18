@@ -54,7 +54,7 @@ class SiteFooter extends React.Component {
               {config.FOOTER_LINKS.map(element => (
                 <a
                   key={element.url}
-                  className={`px-3 ${config.FOOTER_LINKS_CLASSNAMES}`}
+                  className={`px-3 ${config.FOOTER_LINKS_CLASSNAMES || ''}`}
                   href={element.url}
                   target={element.target || 'blank'}
                 >
