@@ -15,6 +15,7 @@ const FooterWithContext = ({ locale = 'es' }) => {
       LMS_BASE_URL: process.env.LMS_BASE_URL,
       FOOTER_CUSTOM_STYLE: { color: 'black' },
       FOOTER_CUSTOM_CLASSNAMES: 'text-center',
+      FOOTER_CONTAINER_CUSTOM_CLASSNAMES: 'text-center',
       FOOTER_LOGO_STYLE: { color: 'white' },
       FOOTER_LINKS: [
         { url: 'https://openedx.org/terms-of-use/', text: 'Terms of service' },
