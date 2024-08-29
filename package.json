@@ -36,10 +36,10 @@
   "devDependencies": {
     "@edx/brand": "npm:@openedx/brand-openedx@^1.2.2",
     "@edx/browserslist-config": "^1.1.1",
-    "@edx/frontend-platform": "8.0.4",
+    "@edx/frontend-platform": "https://github.com/open-craft/frontend-platform/releases/download/v7.1.2-token-asu-moe/edx-frontend-platform-7.1.2.tgz",
     "@edx/reactifex": "^2.1.1",
-    "@openedx/frontend-build": "github:edunext/frontend-build#dcoa/design-tokens-support",
-    "@openedx/frontend-plugin-framework": "^1.1.2",
+    "@openedx/frontend-build": "github:open-craft/frontend-build#asu-moe/redwood-css",
+    "@openedx/frontend-plugin-framework": "https://github.com/open-craft/frontend-plugin-framework/releases/download/v1.1.2-token-asu-moe/openedx-frontend-plugin-framework-1.1.2.tgz",
     "@openedx/paragon": "23.0.0-alpha.1",
     "@testing-library/jest-dom": "^5.16.4",
     "@testing-library/react": "^12.1.1",
