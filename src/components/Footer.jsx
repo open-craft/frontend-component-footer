@@ -42,25 +42,39 @@ class SiteFooter extends React.Component {
     } = this.props;
     const showLanguageSelector = supportedLanguages.length > 0 && onLanguageSelected;
     const { config } = this.context;
-
     return (
       <footer
         role="contentinfo"
-        className="footer d-flex border-top py-3 px-4"
+        className={`footer d-flex border-top py-3 px-4 ${config.FOOTER_CUSTOM_CLASSNAMES || ''}`}
+        style={config.FOOTER_CUSTOM_STYLE}
       >
-        <div className="container-fluid d-flex">
+        <div className={`container-xl py-2 d-flex align-items-center ${config.FOOTER_CONTAINER_CUSTOM_CLASSNAMES || ''}`}>
+          {Array.isArray(config.FOOTER_LINKS) && (
+            <div className={`d-flex align-items-center justify-content-center ${config.FOOTER_LINKS_CONTAINER_CLASSNAMES || ''}`}>
+              {config.FOOTER_LINKS.map(element => (
+                <a
+                  key={element.url}
+                  className={`px-3 ${config.FOOTER_LINKS_CLASSNAMES || ''}`}
+                  href={element.url}
+                  target={element.target || 'blank'}
+                >
+                  {element.text}
+                </a>
+              ))}
+            </div>
+          )}
+          <div className="flex-grow-1" />
           <a
             className="d-block"
             href={config.LMS_BASE_URL}
             aria-label={intl.formatMessage(messages['footer.logo.ariaLabel'])}
           >
             <img
-              style={{ maxHeight: 45 }}
+              style={{ maxHeight: 45, ...config.FOOTER_LOGO_STYLE }}
               src={logo || config.LOGO_TRADEMARK_URL}
               alt={intl.formatMessage(messages['footer.logo.altText'])}
             />
           </a>
-          <div className="flex-grow-1" />
           {showLanguageSelector && (
             <LanguageSelector
               options={supportedLanguages}
