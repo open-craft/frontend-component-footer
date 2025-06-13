@@ -4,9 +4,9 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { initialize, getConfig, subscribe, APP_READY } from '@edx/frontend-platform';
 import { AppContext, AppProvider } from '@edx/frontend-platform/react';
-import Footer from '@edx/frontend-component-footer';
 
 import './index.scss';
+import FooterSlot from '../src/plugin-slots/FooterSlot';
 
 subscribe(APP_READY, () => {
   ReactDOM.render(
@@ -15,7 +15,7 @@ subscribe(APP_READY, () => {
         authenticatedUser: null,
         config: getConfig(),
       }}>
-        <Footer
+        <FooterSlot
           onLanguageSelected={() => {}}
           supportedLanguages={[
             { label: 'English', value: 'en' },

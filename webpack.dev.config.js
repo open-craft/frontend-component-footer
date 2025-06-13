@@ -14,4 +14,7 @@ module.exports = createConfig('webpack-dev', {
       '@edx/frontend-component-footer': path.resolve(__dirname, 'src'),
     },
   },
+  devServer: {
+    allowedHosts: 'all',
+  },
 });

@@ -1,0 +1,20 @@
+$opencraft-green: #0F1F24 !default;
+$footer-text-color: #ffffff !default;
+$footer-link-hover-color: #8CAEB5 !default;
+$opencraft-footer-link-color: #5EFFC9 !default;
+$opencraft-accent: #203D44 !default;
+
+.opencraft-footer {
+  background-color: $opencraft-green;
+  color: $footer-text-color;
+  font-size: 16px;
+  .opencraft-logo {
+    height: 60px;
+  }
+  hr {
+    border-color: $opencraft-accent;
+  }
+  a {
+    color: $opencraft-footer-link-color;
+  }
+}
